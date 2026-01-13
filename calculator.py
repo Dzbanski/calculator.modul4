@@ -57,5 +57,5 @@ def operation(choice, *args):
 if __name__ == "__main__":
     choice, numbers = input_numbers()
     wynik = operation(choice,*numbers)
-if wynik is not None:
-    print("Wynik to :", wynik)
+    if wynik is not None:
+         print("Wynik to :", wynik)
