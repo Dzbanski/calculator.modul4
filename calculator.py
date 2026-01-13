@@ -1,11 +1,10 @@
 import logging
 import sys
-import math
 
 logging.basicConfig(level=logging.DEBUG)
 
 numbers = []
-multiply =[]
+
 try: 
     choice = int(input("Podaj działanie, posługując się odpowiednią liczbą: 1 Dodawanie, 2 Odejmowanie, 3 Mnożenie, 4 Dzielenie"))
     if choice in [1,3]:
