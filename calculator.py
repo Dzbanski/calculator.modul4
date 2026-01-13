@@ -1,13 +1,15 @@
 import logging
+import sys
 
 logging.basicConfig(level=logging.DEBUG)
 
-
-choice = int(input("Podaj działanie, posługując się odpowiednią liczbą: 1 Dodawanie, 2 Odejmowanie, 3 Mnożenie, 4 Dzielenie"))
-a = float(input("Podaj składnik 1."))
-b = float(input("Podaj składnik 2."))
-
-
+try:
+    choice = int(input("Podaj działanie, posługując się odpowiednią liczbą: 1 Dodawanie, 2 Odejmowanie, 3 Mnożenie, 4 Dzielenie"))
+    a = float(input("Podaj składnik 1."))
+    b = float(input("Podaj składnik 2."))
+except ValueError:
+    logging.warning("Nie podałeś liczby !")
+    sys.exit(0)
 
 def operation(choice, a,b):
    
