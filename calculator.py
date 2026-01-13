@@ -49,7 +49,7 @@ def operation(choice, *args):
             logging.info("Dzielę liczby %s , %s", a,b)
             return a / b
 
-
-wynik = operation(choice,*numbers)
+if __name__ == "__main__":
+    wynik = operation(choice,*numbers)
 if wynik is not None:
     print("Wynik to :", wynik)
