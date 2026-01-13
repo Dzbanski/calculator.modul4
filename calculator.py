@@ -4,6 +4,9 @@ import sys
 logging.basicConfig(level=logging.DEBUG)
 
 def input_numbers():
+    """
+    Function input_numbers use exception handling and try to take number from user. If he choose 1,3 it will ask for how much numbers he want to add or multiply. Then loop iterate those numbers and user is asked about which number he want. After that those numbers are append to tuple and function return choice and numbers. If user choose 2,4 it will work in a same way with little difference. If user don't type a number and type for example a letter it will throw exception ValueError with logging warning. Then program will shutdown.
+    """
 
     try:
         numbers = []
