@@ -1,15 +1,17 @@
 import logging
 import sys
+import math
 
 logging.basicConfig(level=logging.DEBUG)
 
 numbers = []
+multiply =[]
 try: 
     choice = int(input("Podaj działanie, posługując się odpowiednią liczbą: 1 Dodawanie, 2 Odejmowanie, 3 Mnożenie, 4 Dzielenie"))
     if choice in [1,3]:
         many = int(input("Na ilu liczbach chcesz wykonać obliczenia? :"))
         for i in range(many):
-            next_number = float(input("Podaj składnik %s" % (i+1)))
+            next_number = float(input("Podaj składnik %s :"% (i+1)))
             numbers.append(next_number)
     else:     
         a = float(input("Podaj składnik 1."))
@@ -28,20 +30,23 @@ def operation(choice, *args):
     :param b: number 2
     """
     if choice == 1: 
-        logging.info("Dodaję : %s", args)
+        logging.info("Dodaję liczby%s", ", ".join(str(x) for x in args))
         return sum(args)
     elif choice == 2:
-        logging.info("Odejmuję : %s i %s", a,b)
+        logging.info("Odejmuję liczby %s , %s", a,b)
         return a - b
     elif choice == 3:
-        logging.info("Mnożę : %s i %s", a,b)
-        return a * b
+        logging.info("Mnożę liczby %s",", ".join(str(x) for x in args))
+        handy= 1
+        for z in args:
+            handy = handy * z
+        return handy
     elif choice == 4:
         if b == 0:
             logging.warning("Nie dzielimy przez 0")
             return None
         else:
-            logging.info("Dzielę : %s i %s", a,b)
+            logging.info("Dzielę liczby %s , %s", a,b)
             return a / b
 
 
