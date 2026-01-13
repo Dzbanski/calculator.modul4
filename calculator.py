@@ -28,6 +28,7 @@ def operation(choice, *args):
     :param choice: User's can choose addition(1), subtraction(2), multiplication(3), division(4)
     :param a: number 1
     :param b: number 2
+    Description multiplication : Variable "handy" is very useful because she add possibility to multiply every element of tuple without a problem. It must have be "1" because if i would choose another number it would give me bad result. For example "0" and my result would be "0" and this isnt truth.
     """
     if choice == 1: 
         logging.info("Dodaję liczby%s", ", ".join(str(x) for x in args))
